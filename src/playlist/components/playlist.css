@@ -1,0 +1,18 @@
+.playlist-wrapper  h3{
+	margin-top: 0;
+}
+.playlist-wrapper {
+    padding: 0 1em;
+}
+.playlist{
+	overflow: auto;
+	display: flex;
+	margin: 0;
+	flex-flow: nowrap;
+	align-items: flex-start;
+	padding-bottom: 20px;
+}
+.playlist > .col{
+	float: none;
+	margin: 0;
+}

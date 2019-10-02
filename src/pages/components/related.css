@@ -1,0 +1,14 @@
+.related{
+	width: 20%;
+	background-color: #171A2F;
+	max-height: 100vh;
+	position: sticky;
+	top: 0;
+	overflow-y: auto;
+}
+.related img{
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+}
