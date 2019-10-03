@@ -11,6 +11,7 @@ import Home from '../pages/containers/home';
 //import data from '../api.json';
 import reducer from '../reducers/index';
 import {Map as map} from 'immutable';
+import {BrowserRouter} from 'react-router-dom';
 
 // function logger({getState, dispatch}) {
 // 	return (next)=> {
@@ -53,8 +54,11 @@ const store = createStore(
 );
 
 render(
-	<Provider store={store}>
-		<Home />
-	</Provider>,
+	<BrowserRouter
+	basename="/videos">
+		<Provider store={store}>
+			<Home />
+		</Provider>
+	</BrowserRouter>,
 	document.getElementById("home-container")
 );
