@@ -13,6 +13,8 @@ import reducer from '../reducers/index';
 import {Map as map} from 'immutable';
 import {BrowserRouter} from 'react-router-dom';
 
+import Header from '../pages/components/header'
+
 // function logger({getState, dispatch}) {
 // 	return (next)=> {
 // 		return (action) => {
@@ -57,7 +59,10 @@ render(
 	<BrowserRouter
 	basename="/videos">
 		<Provider store={store}>
-			<Home />
+			<React.Fragment>
+				<Header />
+				<Home />
+			</React.Fragment>
 		</Provider>
 	</BrowserRouter>,
 	document.getElementById("home-container")
