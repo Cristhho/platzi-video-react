@@ -9,10 +9,11 @@ import thunk from 'redux-thunk';
 
 import Home from '../pages/components/home';
 import Videos from '../pages/containers/home';
+import NotFound from '../pages/components/not-found';
 //import data from '../api.json';
 import reducer from '../reducers/index';
 import {Map as map} from 'immutable';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import Header from '../pages/components/header'
 
@@ -61,10 +62,15 @@ render(
 		<Provider store={store}>
 			<React.Fragment>
 				<Header />
-				<Route path="/" component={Home} exact/>
-				<Route path="/videos" exact>
-					<Videos />
-				</Route>
+				<Switch>
+					<Route exact path="/" component={Home}/>
+					<Route exact path="/videos">
+						<Videos />
+					</Route>
+					<Route>
+						<NotFound />
+					</Route>
+				</Switch>
 			</React.Fragment>
 		</Provider>
 	</BrowserRouter>,
