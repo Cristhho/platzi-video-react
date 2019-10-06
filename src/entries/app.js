@@ -64,13 +64,9 @@ render(
 				<Header />
 				<Switch>
 					<Route exact path="/" component={Home}/>
-					<Route exact path="/videos">
-						<Videos />
-					</Route>
+					<Route exact path="/videos" component={Videos} />
 					<Redirect from="/v" to="/videos" />
-					<Route>
-						<NotFound />
-					</Route>
+					<Route component={NotFound} />
 				</Switch>
 			</React.Fragment>
 		</Provider>
