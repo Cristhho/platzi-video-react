@@ -13,7 +13,7 @@ import NotFound from '../pages/components/not-found';
 //import data from '../api.json';
 import reducer from '../reducers/index';
 import {Map as map} from 'immutable';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 
 import Header from '../pages/components/header'
 
@@ -67,6 +67,7 @@ render(
 					<Route exact path="/videos">
 						<Videos />
 					</Route>
+					<Redirect from="/v" to="/videos" />
 					<Route>
 						<NotFound />
 					</Route>
